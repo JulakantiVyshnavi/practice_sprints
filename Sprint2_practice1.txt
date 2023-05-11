@@ -1,0 +1,76 @@
+//Rectangle Program
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter length and breadth of the rectangle:");
+
+        // Read user input
+        string[] input = Console.ReadLine().Split();
+        double length = double.Parse(input[0]);
+        double breadth = double.Parse(input[1]);
+
+        // To Calculate perimeter
+        double perimeter = 2 * (length + breadth);
+
+        // To Print the result
+        Console.WriteLine(perimeter);
+    }
+}
+
+
+// temparature Conversion Program
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter length and breadth of the rectangle:");
+
+        // Read user input
+        string[] input = Console.ReadLine().Split();
+        double length = double.Parse(input[0]);
+        double breadth = double.Parse(input[1]);
+
+        // Calculate perimeter
+        double perimeter = 2 * (length + breadth);
+
+        // Print the result
+        Console.WriteLine(perimeter);
+    }
+}
+
+// simple intrest calculator program
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string name = "Sam";
+        int age = 65;
+        double depositAmount = 23000.00;
+        double interestRate = 12.75;
+
+        Console.WriteLine("Name\tAge\tDeposit-Amount\tInterestRate (%) \tYears\tAmount (SI)");
+        Console.WriteLine("----------------------------------------------------------------");
+
+        for (int years = 1; years <= 5; years++)
+        {
+            double simpleInterest = CalculateSimpleInterest(depositAmount, interestRate, years);
+            Console.WriteLine($"{name}\t{age}\t{depositAmount}\t\t{interestRate}\t\t{years}\t{simpleInterest}");
+        }
+    }
+
+    static double CalculateSimpleInterest(double principal, double rate, int years)
+    {
+        double interest = principal * rate * years / 100;
+        return interest;
+    }
+}
+
