@@ -1,0 +1,112 @@
+Exercise - 1
+***Algorithm for accepting two numbers, divide first number by second and display quotient.***
+Step 1 :Start
+Step 2 :Accept the first number and store it in a variable "num1"
+Step 3 :Accept the second number and store it in a variable "num2"
+Step 4 :If num2 is equal to 0, display an error message "Cannot divide by zero" and stop the program.
+step 5 :Otherwise, divide num1 by num2 and store the quotient in a variable "result".
+step 6 :Display the value of "result".
+step 7 :Stop.
+
+Exercise - 2
+***algorithm to take input in kilometers and convert into meters and display the result***
+step 1 :Start
+step 2 :Accept the distance in kilometers and store it in a variable "distance_km".
+step 3 :Multiply the distance_km by 1000 to convert it into meters, and store the result in a variable "distance_m".
+step 4 :Display the value of "distance_m".
+step 5 :Stop.
+
+Exercise - 3
+*** take 5 numbers and find avg and sum***
+Start
+step 1 : Accept the first number and store it in a variable "num1".
+step 2 : Accept the second number and store it in a variable "num2".
+step 3 :Accept the third number and store it in a variable "num3".
+step 4 :Accept the fourth number and store it in a variable "num4".
+step 5 :Accept the fifth number and store it in a variable "num5".
+step 6 :Calculate the sum of all the numbers by adding them together, and store the result in a variable "total".
+step 7 :Calculate the average of the numbers by dividing the total by 5, and store the result in a variable "average".
+step 8 :Display the value of "total" and "average".
+step 9 :Stop.
+ 
+Exercise - 4
+***take a number and find it odd or even***
+step 1 :Start
+step 2 :Accept a number as input and store it in a variable "num".
+step 3 :Divide the number by 2 and check the remainder. If the remainder is 0, the number is even. If the remainder is 1, the number is odd.
+step 4 :If the remainder is 0, display a message "The number is even".
+step 5 :If the remainder is 1, display a message "The number is odd".
+step 6 :Stop.
+
+Exercise - 5
+*** algorithm for taking two numbers and displaying greatest number***
+step 1 :Start
+step 2 :Declare 2 numbers "a" and "b"
+step 3 :If "a" is greater than "b", display "a" as the greatest number
+step 4 :If "b" is greater than "a", display "b" as the greatest number
+step 5 :If "a" is equal to "b", display "Both numbers are equal"
+step 6 :Stop.
+
+Exercise - 6
+
+ Algorithm for finding the area of a rectangle:
+
+step 1 :Start
+step 2 :declare variables as length,width and Area(formula is area = length*width)
+step 3 :take input from user
+step 3 :Multiply the length and width to get the area of the rectangle
+step 4 :Display the area of the rectangle
+step 5 :stop
+
+Exerciese - 7
+Algorithm for finding the area of a square:
+
+step 1 :Start
+step 2 :Declare the Variable as length_of_square
+step 3 :take input from the user for length of the square(area of the square = side * side)
+step 3 :Multiply the side length by itself to get the area of the square(formula for area of the square = side * side)
+step 4 :Display the area of the square
+step 5 :stop
+
+Exercise - 8
+algorithm for accepting character  and display weather it is constant or vowel
+
+step 1 :Start
+step 2 :Declare the variable as character
+step 3 :take input from user 
+step 4 :If the character is 'a', 'e', 'i', 'o', or 'u', display "The character is a vowel."
+step 5 :Otherwise, display "The character is a consonant."
+step 6 :stop
+
+Exersise - 9
+Displaying Highest of three numbers
+step 1: start
+step 2: Declare three numbers as num1, num2, num3(to read input from user)
+step 3: check if num1 is greater than num 2
+step 4: if true, check if num1 is greater than num3.
+             3.1 if true, print num1 is the greatest number
+             3.2 if false, print num3 is the greatest number
+step 5: if false, then check num2 is greater than num3
+             4.1 if true, print num2 as greatest number
+             4.2 if false, print num3 as the greatest number
+step 6: stop.
+
+Exerciese - 10
+algorithm for accepting age from user if the input is valid then check weather the user is a kid, a teenager, adult or senior citizen 
+
+step 1 :Start
+step 2 :declare the variable as age
+step 3 :take the input from user 
+step 4 :If the age is less than 0 or greater than 150, display an error message and go to step 2.
+step 5 :If the age is less than 13, display "The user is a kid."
+step 6 :If the age is between 13 and 19, display "The user is a teenager."
+step 7 :If the age is between 20 and 64, display "The user is an adult."
+step 8 :If the age is greater than or equal to 65, display "The user is a senior citizen."
+step 9 :Stop
+
+
+
+
+
+
+
