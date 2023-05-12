@@ -1,0 +1,236 @@
+1)Accepting Radius and finding area of the circle
+
+begin
+    declare FLOAT radius
+    declare FLOAT area
+    declare FLOAT pi
+
+    SET pi = 3.14159
+
+    read radius
+
+    if radius < 0
+        display "Invalid radius. Please enter a positive value."
+    else
+        SET area = pi * radius * radius
+        display "The area of the circle is:", area
+    end if
+end
+
+2) accepting a number and displaying multiplication of the number
+
+begin
+    declare INTEGER n
+    declare INTEGER i
+
+    read n
+
+    for i = 1 to 10
+        SET result = n * i
+        display n, "x", i, "=", result
+    end for
+END
+
+3)Checking weather the given number is perfect number or not
+
+begin
+    declare INTEGER n
+    declare INTEGER sum
+    declare INTEGER i
+
+    read n
+
+    SET sum = 0
+
+    for i = 1 TO (n / 2)
+        if (num MOD i == 0) 
+            SET sum = sum + i
+        end if
+    end  for
+
+    if (sum == n) 
+        display n, "is a perfect number."
+    else
+        display n, "is not a perfect number."
+    end if
+end
+
+
+
+4)Accepting three numbers and displaying the lowest of the three numbers
+begin
+    declare INTEGER n
+    declare INTEGER sum
+    declare INTEGER i
+
+    read n
+
+    SET sum = 0
+
+    for i = 1 TO (n / 2)
+        if (n % i == 0) 
+            set sum = sum + i
+        end if
+    end for
+
+    if (sum == n) then
+        display n, "is a perfect number."
+    else
+        display n, "is not a perfect number."
+    end if
+end
+
+
+5)Swaping two numbers with out using the third variable
+begin
+    declare INTEGER a, b
+
+    SET a = 11
+    SET b = 99
+
+    display "Values before swapping - "
+    display "a =", a, "b =", b
+
+    SET a = a + b
+    SET b = a - b
+    SET a = a - b
+
+    display "Values after swapping - "
+    display "a =", a, "b =", b
+end
+
+
+6)Acepting the number and checking wether the given number is perfect square or not
+begin
+    declare INTEGER num
+    declare INTEGER root
+
+    read num
+
+    SET root = INTEGER_SQUARE_ROOT(num)
+
+    if (root * root == num) then
+        display "The number", num, "is a perfect square."
+    else
+        display "The number", num, "is not a perfect square."
+    end if
+end
+
+
+
+7)Accepting the number from 1 to 7 and displaying the name of the week
+begin
+    declare INTEGER n
+
+    read n
+
+    Switch n
+        Case 1:
+            display "Sunday"
+            break
+        Case 2:
+            display "Monday"
+            break
+        Case 3:
+            display "Tuesday"
+            break
+        Case 4:
+            display "Wednesday"
+            break
+        Case 5:
+            display "Thursday"
+            break
+        Case 6:
+            display "Friday"
+            break
+        Case 7:
+            display "Saturday"
+            break
+        default:
+            display "Invalid input"
+    end switch
+end
+
+8)Menu driven calculator
+begin
+    declare INTEGER n1, n2
+    declare INTEGER choice
+
+    READ n1
+    READ n2
+
+    display "Menu:"
+    display "1. Addition"
+    display "2. Subtraction"
+    display "3. Multiplication"
+
+    switch
+        case 1:
+             result = n1 + n2
+             display"The result of addition is", result
+            break
+        Case 2:
+             result = n1 - n2
+             display "The result of subtraction is", result
+            break
+        case 3:
+             result = n1 * n2
+             display "The result of multiplication is", result
+            break
+        default:
+            display "Invalid choice"
+     end switch
+end
+
+9)student details
+
+begin
+    declare string studentName
+    declare INTEGER studentAge
+    declare INTEGER marks1, marks2, marks3
+    declare INTEGER totalMarks
+    declare FLOAT percentage
+
+    READ studentName
+    READ studentAge
+    READ marks1
+    READ marks2
+    READ marks3
+
+    set totalMarks = marks1 + marks2 + marks3
+    set percentage = (totalMarks / 300.0) * 100
+
+    display "Student Details:"
+    display "Name:", studentName
+    display "Age:", studentAge
+    display "Marks 1:", marks1
+    display "Marks 2:", marks2
+    display "Marks 3:", marks3
+    display "Total Marks:", totalMarks
+    display "Percentage:", percentage, "%"
+
+    if percentage >= 50.0 
+        display "Pass"
+    else
+        display "Fail"
+    end if
+end
+
+
+10)Printing fibonacci series up to 100
+
+begin
+    declare INTEGER n1, n2, sum
+
+     n1 = 0
+     n2 = 1
+
+    while n1 <= 100
+        display n1
+
+         sum = n1 + n2
+         n1 = n2
+         n2 = sum
+    end while
+end
+
