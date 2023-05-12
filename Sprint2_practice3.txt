@@ -1,0 +1,261 @@
+//intrest calculating by age
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int principleAmount = 23000;
+        
+        Console.Write("Enter your age: ");
+        int age = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Year\tInterest");
+        Console.WriteLine("--------------");
+
+        for (int years = 1; years <= 5; years++)
+        {
+            double interestRate = (age >= 60) ? 0.07 : 0.06;
+            double interest = principleAmount * interestRate * years;
+            
+            Console.WriteLine($"{years}\t{interest}");
+        }
+    }
+}
+
+//Menu Driven temparature convert
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("Temperature Converter");
+            Console.WriteLine("---------------------");
+            Console.WriteLine("1. Centigrade to Fahrenheit");
+            Console.WriteLine("2. Fahrenheit to Centigrade");
+            Console.WriteLine("3. Exit");
+            Console.WriteLine("---------------------");
+            Console.Write("Enter your choice: ");
+            
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    ConvertCentigradeToFahrenheit();
+                    break;
+                case 2:
+                    ConvertFahrenheitToCentigrade();
+                    break;
+                case 3:
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
+            }
+
+            Console.WriteLine();
+        }
+    }
+
+    static void ConvertCentigradeToFahrenheit()
+    {
+        Console.Write("Enter the temperature in Centigrade: ");
+        double centigrade = double.Parse(Console.ReadLine());
+
+        double fahrenheit = (centigrade * 9 / 5) + 32;
+        Console.WriteLine($"Temperature in Fahrenheit: {fahrenheit}");
+    }
+
+    static void ConvertFahrenheitToCentigrade()
+    {
+        Console.Write("Enter the temperature in Fahrenheit: ");
+        double fahrenheit = double.Parse(Console.ReadLine());
+
+        double centigrade = (fahrenheit - 32) * 5 / 9;
+        Console.WriteLine($"Temperature in Centigrade: {centigrade}");
+    }
+}
+
+//simple calculator
+using System;
+
+class Calculator
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("Menu:");
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtraction");
+            Console.WriteLine("3. Multiplication");
+            Console.WriteLine("4. Division");
+            Console.WriteLine("5. Exit");
+            Console.Write("Enter your choice: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Console.Write("Enter the first number: ");
+                    double num1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Enter the second number: ");
+                    double num2 = Convert.ToDouble(Console.ReadLine());
+                    double sum = num1 + num2;
+                    Console.WriteLine("Result: " + sum);
+                    break;
+                case 2:
+                    Console.Write("Enter the first number: ");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Enter the second number: ");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+                    double difference = num1 - num2;
+                    Console.WriteLine("Result: " + difference);
+                    break;
+                case 3:
+                    Console.Write("Enter the first number: ");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Enter the second number: ");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+                    double product = num1 * num2;
+                    Console.WriteLine("Result: " + product);
+                    break;
+                case 4:
+                    Console.Write("Enter the first number: ");
+                    num1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Enter the second number: ");
+                    num2 = Convert.ToDouble(Console.ReadLine());
+                    
+                    // Check if the second number is zero to avoid division by zero
+                    if (num2 != 0)
+                    {
+                        double quotient = num1 / num2;
+                        Console.WriteLine("Result: " + quotient);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cannot divide by zero.");
+                    }
+                    break;
+                case 5:
+                    // Exit the program
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Invalid Choice");
+                    break;
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+
+//prime number check
+//prime number check program
+using System;  
+  
+namespace PrimeNumber  
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            Console.WriteLine("Enter a number");  
+            int number = Convert.ToInt32(Console.ReadLine());  
+            int result = Check_Prime(number);  //Check_prime is a function
+            if (result == 0)  
+            {  
+                Console.WriteLine("{0} is not a prime number", number);  //
+            }  
+            else  
+            {  
+                 Console.WriteLine("{0} is  a prime number", number);  
+            }              
+            Console.Read();  
+        }   
+  
+        private static int Check_Prime(int number)  
+       {  
+            int i;  
+            for (i = 2; i <= number - 1; i++)  
+            {  
+                if (number % i == 0)  
+                {  
+                    return 0;  
+                }  
+            }  
+            if (i == number)  
+            {  
+                return 1;  
+            }  
+            return 0;  
+        }  
+    }    
+}
+//Armstrong  number program
+using System;  
+public class Exercise29
+{  
+    public static void Main()
+{
+    int num,r,sum=0,temp;
+	
+	
+	Console.Write("\n\n");
+    Console.Write("Check whether a given number is armstrong number or not:\n");
+    Console.Write("\n\n");  	
+
+    Console.Write("Input  a number: ");
+    num = Convert.ToInt32(Console.ReadLine());	
+
+    for(temp=num;num!=0;num=num/10){
+         r=num % 10;
+         sum=sum+(r*r*r);
+    }
+    if(sum==temp)
+         Console.Write("{0} is an Armstrong number.\n",temp);
+    else
+         Console.Write("{0} is not an Armstrong number.\n",temp);
+    }
+}
+//simple interst program
+
+using System;
+
+class SimpleInterestCalculator
+{
+    static void Main()
+    {
+        char choice;
+
+        do
+        {
+            Console.Write("Enter principal amount: ");
+            double principal = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter rate of interest (in percentage): ");
+            double rate = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter time period (in years): ");
+            double time = Convert.ToDouble(Console.ReadLine());
+
+            double interest = (principal * rate * time) / 100;
+
+            Console.WriteLine("Simple Interest: " + interest);
+
+            Console.Write("Do you want to continue? (Y/N): ");
+            choice = Console.ReadLine().ToUpper()[0];
+
+            Console.WriteLine();
+        } while (choice == 'Y');
+    }
+}
+
+
