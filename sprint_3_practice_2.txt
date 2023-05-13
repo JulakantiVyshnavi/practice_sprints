@@ -1,0 +1,13 @@
+using System;
+
+public class string_array_program
+{
+    public static void Main(string[] args)
+    {
+        string example_String = "String::is::a:: sealed::class::in::C#";
+        string separator = "::";
+        string[] parts = example_String.Split(new string[] { separator }, StringSplitOptions.None);
+        string result = string.Join(" ", parts);
+        Console.WriteLine(result);
+    }
+}
