@@ -1,0 +1,140 @@
+using System;
+
+class Array_program
+{
+    static void Main()
+    {
+        double sum = 0, avg = 0;
+
+        Console.Write("Enter the length of the array ");
+        int n = Int32.Parse(Console.ReadLine());
+
+        double[] numbers = new double[n];
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write("Number {0}: ", i + 1);
+            numbers[i] = Convert.ToDouble(Console.ReadLine());
+            sum += numbers[i];
+        }
+
+        avg = sum / numbers.Length;
+
+        Console.WriteLine("The Sum of the numbers : " + sum);
+        Console.WriteLine("The Average of the numbers: " + avg);
+
+        Console.ReadKey();
+    }
+}
+
+// Array Comparision Program
+
+using System;
+
+class Array_Comparision
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter the length of the first array: ");
+        int l1 = Convert.ToInt32(Console.ReadLine());
+
+        int[] a1 = new int[length1];
+
+        Console.WriteLine("Enter first array:");
+        for (int i = 0; i < l1; i++)
+        {
+            a1[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        Console.Write("Enter the length of the second array: ");
+        int l2 = Convert.ToInt32(Console.ReadLine());
+
+        int[] a2 = new int[l2];
+
+        Console.WriteLine("Enter second array:");
+        for (int i = 0; i < l2; i++)
+        {
+            a2[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        bool areEqual = ArraysAreEqual(a1, a2);
+
+        if (areEqual)
+        {
+            Console.WriteLine("Both arrays are equal");
+        }
+        else
+        {
+            Console.WriteLine("Arrays are not equal");
+        }
+    }
+
+    static bool ArraysAreEqual(int[] a1, int[] a2)
+    {
+        if (a1.Length != a2.Length)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < a1.Length; i++)
+        {
+            if (a1[i] != a2[i])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
+//Maximum and minimum numbers of a array
+
+using System;
+
+class Max&min
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter length of the array: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] numbers = new int[n];
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write("Enter number {0}: ", i + 1);
+            numbers[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        int min = numbers[0];
+        int max = numbers[0];
+
+        for (int i = 0; i < n; i++)
+        {
+            if (min > numbers[i]) min = numbers[i];
+            if (max < numbers[i]) max = numbers[i];
+        }
+
+        Console.WriteLine("minimum Element is: {0}", min);
+        Console.WriteLine("maximum Element is: {0}", max);
+        Console.ReadKey();
+    }
+}
+// sorting array elements
+using System;
+
+class Array_Elements_Sorting
+{
+    static void Main(string[] args)
+    {
+        string[] array = { "Hi", "Welcome", "Arrays", "Java", "Day", "Good" };
+
+        Array.Sort(array);
+
+        Console.WriteLine("The sorted array: [" + string.Join(", ", array) + "]");
+    }
+}
+
+ 
+
+
