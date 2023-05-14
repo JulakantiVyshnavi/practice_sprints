@@ -1,0 +1,179 @@
+// Creating and displaying 3D Array
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Creating a 3D array
+        int[,,] array3D = new int[3, 3, 3];
+
+        // Initialize the array with values
+        for (int p = 0; p < 3; p++)
+        {
+            for (int q = 0; q < 3; q++)
+            {
+                for (int r = 0; r < 3; r++)
+                {
+                    array3D[p, q, r] = p + q + r;
+                }
+            }
+        }
+
+        // Display the array
+        for (int p = 0; p < 3; p++)
+        {
+            for (int q = 0; q < 3; q++)
+            {
+                for (int r = 0; r < 3; r++)
+                {
+                    Console.WriteLine("array3D[{0}, {1}, {2}] = {3}", p, q, r, array3D[p, q, r]);
+                }
+            }
+        }
+    }
+}
+
+// Sum of left, right and diagonal elements
+
+using System;
+
+class sum_of_array_elements
+{
+    static void Main()
+    {
+        int[,] array = new int[3, 3];
+
+        Console.WriteLine("Enter array elements (9 integers):");
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                array[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        int sumLeftDiagonal = 0;
+        int sumRightDiagonal = 0;
+
+        Console.WriteLine("\nLeft diagonal elements:");
+        for (int i = 0; i < 3; i++)
+        {
+            sumLeftDiagonal += array[i, i];
+            Console.Write(array[i, i] + " ");
+        }
+
+        Console.WriteLine("\nSum of left diagonal elements: " + sumLeftDiagonal);
+
+        Console.WriteLine("\nRight diagonal elements:");
+        for (int i = 0; i < 3; i++)
+        {
+            sumRightDiagonal += array[i, 2 - i];
+            Console.Write(array[i, 2 - i] + " ");
+        }
+
+        Console.WriteLine("\nSum of right diagonal elements: " + sumRightDiagonal);
+
+        Console.ReadLine();
+    }
+}
+// Sum of 2D arrays of size 2x2
+using System;
+
+class Sum_of_2D_Array_Elements
+{
+    static void Main()
+    {
+        // Creating first array
+        int[,] array1 = new int[2, 2];
+        Console.WriteLine("Enter array elements of the first array:");
+        for (int a = 0; a < 2; a++)
+        {
+            for (int b = 0; b < 2; b++)
+            {
+                array1[a, b] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        // Creating second array
+        int[,] array2 = new int[2, 2];
+        Console.WriteLine("Enter array elements of the second array:");
+        for (int a = 0; a < 2; a++)
+        {
+            for (int b = 0; b < 2; b++)
+            {
+                array2[a, b] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        // Calculate the sum
+        int[,] sumArray = new int[2, 2];
+        for (int a = 0; a < 2; a++)
+        {
+            for (int b = 0; b < 2; b++)
+            {
+                sumArray[a, b] = array1[a, b] + array2[a, b];
+            }
+        }
+
+        // Display the sum
+        Console.WriteLine("Sum of the arrays is:");
+        for (int a = 0; a < 2; a++)
+        {
+            for (int b = 0; b < 2; b++)
+            {
+                Console.Write(sumArray[a, b] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+//Matrix Multiplication
+
+using System;
+
+class MatrixMultiplication
+{
+    static void Main()
+    {
+        int[,] m1 = { { 7, 6, 1 }, { 2, 3, 8 }, { 3, 8, 1 }, { 1, 1, 3 } };
+        int[,] m2 = { { 4, 1 }, { 9, 7 }, { 1, 3 }, { 3, 8 } };
+
+        int r1 = m1.GetLength(0);
+        int c1 = m1.GetLength(1);
+        int r2 = m2.GetLength(0);
+        int c2 = m2.GetLength(1);
+
+        if (c1 != r2)
+        {
+            Console.WriteLine("Invalid matrices! The number of columns in the first matrix must be equal to the number of rows in the second matrix.");
+            return;
+        }
+
+        int[,] product = new int[r1, c2];
+
+        for (int a = 0; a < r1; a++)
+        {
+            for (int b = 0; b < c2; b++)
+            {
+                for (int c = 0; c < c1; c++)
+                {
+                    product[a, b] += m1[a, c] * m2[c, b];
+                }
+            }
+        }
+
+        Console.WriteLine("Product of two matrices:");
+
+        for (int a = 0; a < r1; a++)
+        {
+            for (int b = 0; b < c2; b++)
+            {
+                Console.Write(product[a, b] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
