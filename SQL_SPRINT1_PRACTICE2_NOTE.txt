@@ -1,0 +1,46 @@
+/*Write a query to insert a record in `Customer` table. 
+
+CustomerID | CustomerName |      Email      | Age |   Phone
+-----------|--------------|-----------------|-----|-------------
+1          | Peter        | Peter@gmail.com | 28  | 234-364-28798*/
+
+
+CREATE DATABASE userinformation;
+use userinformation
+create table Customer(
+CustomerId int,
+CustomerName varchar(20),
+Email varchar(20),
+Age int,
+Phone int,
+)
+INSERT INTO Customer (CustomerId, CustomerName, Email, Age, Phone)
+VALUES (1, 'Peter', 'Peter@gmail.com', 24, '7675656798');
+
+/*2. Write an insert query to insert multiple records in `Customer` table.
+
+CustomerID | CustomerName |      Email      | Age |   Phone
+-----------|--------------|-----------------|-----|-------------
+2          | James        | James@gmail.com | 25  | 346-238-2737
+3          | Steve        | Steve@gmail.com | 30  | 384-238-1278*/
+
+INSERT INTO Customer (CustomerId, CustomerName, Email, Age, Phone)
+VALUES (2, 'James', 'James@gmail.com', 25, '346-238-2737'),
+       (3, 'Steve', 'Steve@gmail.com', 30, '384-238-1278');
+
+/*3. Write a query to update `Age` to 28 and `Email` to James@hotmail.com in `Customer` table for CustomerID=2.*/
+UPDATE Customer
+SET Age = 28, Email = 'James@hotmail.com'
+WHERE CustomerId = 2;
+
+/* 4. Write a query to delete a record from `Customer` table where CustomerID is 3.*/
+
+DELETE FROM Customer
+WHERE CustomerId = 3;
+
+/* Write a query to delete all records from `Customer` table and make sure it cannot be rolled back.*/
+
+DELETE FROM Customer;
+COMMIT;
+
+
